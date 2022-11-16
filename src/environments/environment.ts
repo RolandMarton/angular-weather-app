@@ -4,8 +4,11 @@
 
 export const environment = {
   production: false,
-  weatherApiBaseUrl: 'https://api.openweathermap.org/data/2.5/weather?lat=47.4979&lon=19.0402&units=metric&appid=77996a3f2041c3a077d0ca5e3e5e47c0',
+  // weatherApiBaseUrl: 'https://api.openweathermap.org/data/2.5/weather?lat=47.4979&lon=19.0402&units=metric&appid=77996a3f2041c3a077d0ca5e3e5e47c0',
+  // geoCodingApiUrl: 'http://api.openweathermap.org/geo/1.0/direct?q=Budapest&limit=5&appid=77996a3f2041c3a077d0ca5e3e5e47c0'
 
+  weatherApiBaseUrl: 'https://api.openweathermap.org/data/2.5/weather?',
+  geoCodingApiBaseUrl: 'http://api.openweathermap.org/geo/1.0/direct?'
 };
 
 /*

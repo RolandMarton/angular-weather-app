@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherData } from 'src/app/models/weather.model';
 import { WeatherService } from 'src/app/services/weather.service';
-import { CARDS } from './mock-city-cards';
+import { CARDS } from './essential-card-data';
 
 @Component({
   selector: 'app-city-card',
@@ -10,15 +11,29 @@ import { CARDS } from './mock-city-cards';
 export class CityCardComponent implements OnInit {
 
   cards = CARDS;
+  cityName: string = 'Budapest';
+  weatherData?: WeatherData;
 
   constructor(private weatherService: WeatherService) { 
 
   }
 
   ngOnInit(): void {
-    this.weatherService.getWeatherData('Budapest')
+    this.getWeatherData(this.cityName);
+    this.cityName = '';
+  }
+
+  onSubmit() {
+    this.getWeatherData(this.cityName);
+    console.log(this.cityName)
+    this.cityName = '';
+  }
+
+  private getWeatherData(cityName: string){
+    this.weatherService.getWeatherData(cityName)
     .subscribe({
       next: (response) => {
+        this.weatherData = response;
         console.log(response);
       }
     })
