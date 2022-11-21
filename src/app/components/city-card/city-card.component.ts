@@ -14,7 +14,7 @@ export class CityCardComponent implements OnInit {
   cityName: string = 'Budapest';
   weatherData?: WeatherData;
 
-  constructor(private weatherService: WeatherService) { 
+  constructor(private weatherService: WeatherService) {
 
   }
 
@@ -32,14 +32,14 @@ export class CityCardComponent implements OnInit {
   private async getWeatherData(cityName: string){
     await this.weatherService.getGeoData(cityName);
 
-    setTimeout( () => { 
+    setTimeout( () => {
       this.weatherService.getWeatherData()
-    .subscribe({
-      next: (response) => {
-        this.weatherData = response;
-        console.log(response);
-      }
-    })
+        .subscribe({
+          next: (response) => {
+            this.weatherData = response;
+            console.log(response);
+          }
+        })
     }, 1000 );
 
     // this.weatherService.getWeatherData()
