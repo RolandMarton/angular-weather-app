@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { finalize, Observable, timeInterval } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { WeatherData } from '../models/weather.model';
 import { GeoCodeData } from '../models/geo-coding.model';
@@ -15,8 +15,7 @@ export class WeatherService {
 
   geoCodingData?: any;
 
-  getWeatherData(cityName: string): Observable<WeatherData> {
-  
+  getGeoData(cityName: string) {
     this.http.get<GeoCodeData>(environment.geoCodingApiBaseUrl, {
       params: new HttpParams()
       .set('q', cityName)
@@ -27,7 +26,9 @@ export class WeatherService {
       console.log(this.geoCodingData);
       }
     );
-  
+  }
+
+  getWeatherData(): Observable<WeatherData> {
     return this.http.get<WeatherData>(environment.weatherApiBaseUrl, {
       params: new HttpParams()
       .set('lat', this.geoCodingData[0].lat)

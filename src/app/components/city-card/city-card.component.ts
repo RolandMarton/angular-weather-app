@@ -29,14 +29,26 @@ export class CityCardComponent implements OnInit {
     this.cityName = '';
   }
 
-  private getWeatherData(cityName: string){
-    this.weatherService.getWeatherData(cityName)
+  private async getWeatherData(cityName: string){
+    await this.weatherService.getGeoData(cityName);
+
+    setTimeout( () => { 
+      this.weatherService.getWeatherData()
     .subscribe({
       next: (response) => {
         this.weatherData = response;
         console.log(response);
       }
     })
+    }, 1000 );
+
+    // this.weatherService.getWeatherData()
+    // .subscribe({
+    //    next: (response) => {
+    //     this.weatherData = response;
+    //     console.log(response);
+    //   }
+    // })
   }
 
 }
