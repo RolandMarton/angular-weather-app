@@ -10,14 +10,14 @@ City Below 15 Celsius
 City Above 15 Celsius
 ![16-11-2022-WeatherApp-Warm](https://user-images.githubusercontent.com/88943189/202256363-efab44a1-67fb-4f06-afbe-ca869b5c1edb.png)
 
-## Main Tools
+### Main Tools
 - Angular 14
 - Typescript
 - Sass
 - OpenWeather API - to get data of the searched city
 - Geocoding API - to get longitude latitude of a city (city dependent search mechanism)
 
-## Challenge and Results
+### Challenge and Results
 - Components are in different folders - have reusable components
 - Models interface - give a structure for fetched data
 - Service to communicate with API and Components
@@ -27,18 +27,18 @@ City Above 15 Celsius
 - Assets/Images folder for Resources
 - Have possibility to do Routing in the future
 
-## Challenge to do
+### Challenge to do
 - Make the request asnyc so the second API waits the first
 - Make the Search-field component ready and seperate data in components. Make two-way, one-way databinding
 - Communication with Parant <--> Child
 
 ## Development - Day 2 - 21/11/2022
 
-## Challenge and Results
+### Challenge and Results
 - Working with NgRx - still need to improve about operators, asnycron requests (2 fetch)
 - Github detached head - merge conflict problem solved
 - Now fetch waits the others so it's kinda asyncron - will have to rework with NgRx
 
-## Challenge to do
+### Challenge to do
 - Form is a different component and states, fetch, methods are working individually in different components (Started - Git disaster happened - fixed)
 - Need to master @Input and @Output + NgRx Operators and Observables
