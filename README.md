@@ -31,3 +31,14 @@ City Above 15 Celsius
 - Make the request asnyc so the second API waits the first
 - Make the Search-field component ready and seperate data in components. Make two-way, one-way databinding
 - Communication with Parant <--> Child
+
+## Development - Day 2 - 21/11/2022
+
+## Challenge and Results
+- Working with NgRx - still need to improve about operators, asnycron requests (2 fetch)
+- Github detached head - merge conflict problem solved
+- Now fetch waits the others so it's kinda asyncron - will have to rework with NgRx
+
+## Challenge to do
+- Form is a different component and states, fetch, methods are working individually in different components (Started - Git disaster happened - fixed)
+- Need to master @Input and @Output + NgRx Operators and Observables
