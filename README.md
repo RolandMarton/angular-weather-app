@@ -2,7 +2,12 @@
 
 This is a webpage of a weather application, currently with 2 API-s and fetching data of different cities and their current weather state. You can search your city's current weather.
 
-## Development - Day 1 - 16/11/2022
+### Main Tools
+- Angular 14
+- Typescript
+- Sass
+- OpenWeather API - to get data of the searched city
+- Geocoding API - to get longitude latitude of a city (city dependent search mechanism)
 
 City Below 15 Celsius
 ![16-11-2022-WeatherApp](https://user-images.githubusercontent.com/88943189/202256058-2b65c2fa-cd40-48d6-8ca5-c5d7375fe33c.png)
@@ -10,12 +15,7 @@ City Below 15 Celsius
 City Above 15 Celsius
 ![16-11-2022-WeatherApp-Warm](https://user-images.githubusercontent.com/88943189/202256363-efab44a1-67fb-4f06-afbe-ca869b5c1edb.png)
 
-### Main Tools
-- Angular 14
-- Typescript
-- Sass
-- OpenWeather API - to get data of the searched city
-- Geocoding API - to get longitude latitude of a city (city dependent search mechanism)
+## Development - Day 1 - 16/11/2022
 
 ### Challenge and Results
 - Components are in different folders - have reusable components
