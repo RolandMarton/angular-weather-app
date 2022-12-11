@@ -42,3 +42,5 @@ City Above 15 Celsius
 ### Challenge to do
 - Form is a different component and states, fetch, methods are working individually in different components (Started - Git disaster happened - fixed)
 - Need to master @Input and @Output + NgRx Operators and Observables
+
+# NOTE - You shouldn't store your sensitive data of the application inside the source tree! It's a demo app, that's why it is included in the environment file. Use environment variables or store them in files outside the app's source tree.
