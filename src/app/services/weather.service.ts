@@ -1,6 +1,6 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { finalize, Observable, timeInterval } from 'rxjs';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { WeatherData } from '../models/weather.model';
 import { GeoCodeData } from '../models/geo-coding.model';
@@ -11,9 +11,9 @@ import { GeoCodeData } from '../models/geo-coding.model';
 
 export class WeatherService {
 
-  constructor(private http: HttpClient) { }
-
   geoCodingData?: any;
+
+  constructor(private http: HttpClient) { }
 
   getGeoData(cityName: string) {
     this.http.get<GeoCodeData>(environment.geoCodingApiBaseUrl, {

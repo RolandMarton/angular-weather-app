@@ -41,14 +41,6 @@ export class CityCardComponent implements OnInit {
           }
         })
     }, 1000 );
-
-    // this.weatherService.getWeatherData()
-    // .subscribe({
-    //    next: (response) => {
-    //     this.weatherData = response;
-    //     console.log(response);
-    //   }
-    // })
   }
 
 }
