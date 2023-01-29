@@ -9,8 +9,6 @@ import { WeatherService } from 'src/app/services/weather.service';
 })
 export class SearchCityComponent implements OnInit {
 
-  cityName: string = 'Budapest';
-
   @Output() sendCurrentCity = new EventEmitter<string>();
 
   constructor() { }
@@ -18,8 +16,8 @@ export class SearchCityComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    this.sendCurrentCity.emit();
-    this.cityName = '';
+  onSubmit(cityName: string) {
+    this.sendCurrentCity.emit(cityName);
+    console.log("City name in search-city.component " + cityName);
   }
 }

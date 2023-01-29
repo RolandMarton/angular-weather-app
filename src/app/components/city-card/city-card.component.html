@@ -1,8 +1,4 @@
-<div class="search">
-  <form #form="ngForm" (submit)="onSubmit()">
-    <input #city type="text" placeholder="Search City" name="city" [(ngModel)]="cityName">
-  </form>
-</div>
+<app-search-city (sendCurrentCity)="onSubmit($event)" ></app-search-city>
 
 <div class="container" *ngIf="weatherData" [ngStyle]="{ 'background-color' : weatherData.main.temp < 15 ? 'var(--blue-2)' : 'var(--red-2)' }">
     <div class="upper-data">

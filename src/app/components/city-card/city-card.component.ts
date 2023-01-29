@@ -11,22 +11,17 @@ import { CARDS } from './essential-card-data';
 export class CityCardComponent implements OnInit {
 
   cards = CARDS;
-  cityName: string = 'Budapest';
   weatherData?: WeatherData;
 
-  constructor(private weatherService: WeatherService) {
-
-  }
+  constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
-    this.getWeatherData(this.cityName);
-    this.cityName = '';
+    this.getWeatherData("Budapest");
   }
 
-  onSubmit() {
-    this.getWeatherData(this.cityName);
-    console.log(this.cityName)
-    this.cityName = '';
+  onSubmit(cityName: string) {
+    this.getWeatherData(cityName);
+    console.log("City name in City-card.component: " + cityName)
   }
 
   private async getWeatherData(cityName: string){
