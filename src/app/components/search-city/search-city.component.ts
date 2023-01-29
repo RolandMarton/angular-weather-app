@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Output, EventEmitter } from '@angular/core';
-import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
   selector: 'app-search-city',
