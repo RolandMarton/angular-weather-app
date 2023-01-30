@@ -19,12 +19,8 @@ export class CityCardComponent implements OnInit {
     this.getWeatherData("Budapest");
   }
 
-  onSubmit(cityName: string) {
-    this.getWeatherData(cityName);
+  async getWeatherData(cityName: string){
     console.log("City name in City-card.component: " + cityName)
-  }
-
-  private async getWeatherData(cityName: string){
     await this.weatherService.getGeoData(cityName);
 
     setTimeout( () => {
